@@ -1,0 +1,14 @@
+/*Переменные и шаблоны*/
+
+@import 'common/mixin';
+//@import 'common/sprite';
+@import 'common/layout';
+@import 'common/fonts';
+
+/*Блоки*/
+
+@import 'block/**/*';
+
+/*Страницы*/
+
+@import 'pages/welcome/index'

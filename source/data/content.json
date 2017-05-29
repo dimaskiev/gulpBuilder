@@ -1,0 +1,16 @@
+{
+
+    "contacts": [{
+            "skype": ["dimaskiev81"]
+        },
+        {
+            "email": ["manager.ua@gmail.com"]
+        },
+        {
+            "phone": ["+380674076067"]
+        },
+        {
+            "address": ["Ukraine, Zhytomir"]
+        }
+    ]
+}
