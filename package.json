@@ -1,15 +1,15 @@
 {
-    "name": "r@builder",
+    "name": "gulpBuilder",
     "version": "2.0.0",
     "description": "yarn+gulp",
-    "main": "gulpfile.js",
+    "main": "index.js",
     "repository": "http://github.com/dimaskiev/gulpBuilder",
     "author": "d.romanchuk",
     "license": "MIT",
     "dependencies": {
         "browser-sync": "^2.18.12",
         "del": "^2.2.2",
-        "gulp": "^3.9.1",
+        "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-cheerio": "^0.6.2",
         "gulp-concat": "^2.6.1",
