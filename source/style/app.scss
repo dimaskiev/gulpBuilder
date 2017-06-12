@@ -1,8 +1,17 @@
-/*Переменные и шаблоны*/
+/*Миксины*/
 
 @import 'common/mixin';
-//@import 'common/sprite';
+
+/*Спрайты*/
+
+@import 'common/sprite';
+
+/*Обшие настройки*/
+
 @import 'common/layout';
+
+/*Шрифты*/
+
 @import 'common/fonts';
 
 /*Блоки*/
@@ -11,4 +20,8 @@
 
 /*Страницы*/
 
-@import 'pages/welcome/index'
+@import 'pages/index';
+
+/*Адаптив*/
+
+@import 'adaptive/**/*';

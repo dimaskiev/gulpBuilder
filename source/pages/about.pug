@@ -1,0 +1,12 @@
+extends ../template/pages/_template
+
+block variables
+  - var title = 'About pages'
+  
+
+
+block content
+  include ../template/common/_header
+  .wrapper
+     p.text Привет, about!
+     a(class="link" href="index.html") index

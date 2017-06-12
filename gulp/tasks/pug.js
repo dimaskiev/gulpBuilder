@@ -4,7 +4,7 @@
 module.exports = function() {
     const fs = require('fs');
     $.gulp.task('pug', function() {
-        return $.gulp.src('./source/template/pages/*.pug')
+        return $.gulp.src('./source/pages/**/*.pug')
             .pipe($.gp.pug({
                 locals: JSON.parse(fs.readFileSync('./source/data/content.json', 'utf8')),
                 pretty: true
