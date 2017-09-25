@@ -26,23 +26,13 @@ global.$ = {
     })
 };
 
-$.path.task.forEach(function(taskPath) {
-    require(taskPath)();
-});
+$
+    .path
+    .task
+    .forEach(function (taskPath) {
+        require(taskPath)();
+    });
 
-$.gulp.task('default', $.gulp.series(
-    'clean',
-    $.gulp.parallel(
-        'sass',
-        'pug',
-        'js:foundation',
-        'js:process',
-        'copy:image',
-        'copy:fonts',
-        'css:foundation'
-    ),
-    $.gulp.parallel(
-        'watch',
-        'serve'
-    )
-));
+$
+    .gulp
+    .task('default', $.gulp.series('clean', $.gulp.parallel('sass', 'pug', 'js:foundation', 'js:process', 'sprite:png', 'sprite:svg', 'copy:image', 'copy:fonts', 'css:foundation'), $.gulp.parallel('watch', 'serve')));

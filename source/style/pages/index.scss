@@ -1,0 +1,32 @@
+.block {
+    background-color: green;
+    justify-content: center;
+    padding-left: 10px;
+    padding-left: 10px;
+    @include desktop {
+        background-color: red;
+    }
+    @include laptop {
+        background-color: blue;
+    }
+    @include tablet {
+        background-color: yellow;
+    }
+    @include phone {
+        background-color: gray;
+    }
+}
+
+.header {
+    background-color: violet;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.footer {
+    height: 100px;
+    @include flex-column;
+    @include center-center;
+    background-color: red;
+}

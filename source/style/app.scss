@@ -1,27 +1,8 @@
-/*Миксины*/
-
+@import 'common/variables';
 @import 'common/mixin';
-
-/*Спрайты*/
-
 @import 'common/sprite';
-
-/*Обшие настройки*/
-
 @import 'common/layout';
-
-/*Шрифты*/
-
+@import 'common/media';
 @import 'common/fonts';
-
-/*Блоки*/
-
 @import 'block/**/*';
-
-/*Страницы*/
-
-@import 'pages/index';
-
-/*Адаптив*/
-
-@import 'adaptive/**/*';
+@import 'pages/**/*';
