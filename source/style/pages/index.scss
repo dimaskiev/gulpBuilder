@@ -1,4 +1,60 @@
-.block {
+
+@include laptop {
+ .mix{
+   color: black;
+ }
+}
+
+
+@include laptop {
+  .mix{
+    width: 1256px
+  }
+ }
+
+//@import 'smart-grid';
+/*
+.items{
+  @include row-flex();
+  @include md(justify-content, center);
+
+  .item{
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-xs(12);
+      background-color: black;
+      min-width: 150px;
+      height: 200px;
+      border-color: green;
+  }
+}
+
+@include laptop{
+  footer{
+    color: black;
+  }
+}
+
+@include desktop{
+  footer{
+    color: black;
+  }
+}
+
+
+@include laptop{
+  footer{
+    font-size: red;
+  }
+}
+
+@include laptop{
+  footer{
+    bgcolor: red;
+  }
+}
+/*.block {
     background-color: green;
     justify-content: center;
     padding-left: 10px;
@@ -29,4 +85,4 @@
     @include flex-column;
     @include center-center;
     background-color: red;
-}
+}*/

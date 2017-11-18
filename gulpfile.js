@@ -26,13 +26,72 @@ global.$ = {
     })
 };
 
-$
-    .path
-    .task
-    .forEach(function (taskPath) {
+$.path.task.forEach(function (taskPath) {
         require(taskPath)();
     });
 
+$.gulp.task('default',
+      $.gulp.series('clean', 
+        $.gulp.parallel( 
+          'smartgrid',
+          'sass',
+          'pug',
+          'js:foundation',
+          'js:lint',
+          'js:process',
+          'sprite:png',
+          'sprite:svg',
+          'copy:image',
+          'copy:fonts',
+          'css:foundation',
+          
+          
+        $.gulp.parallel(
+          'watch',
+          'serve')
+        )
+      )
+    );
+$.gulp.task('build',
+  $.gulp.series(
+    'sass',
+    'pug',
+    'js:foundation',
+    'js:lint',
+    'js:process',
+    'sprite:png',
+    'sprite:svg',
+    'copy:image',
+    'copy:fonts',
+    'css:foundation',    
+    'css:mediagroup',
+    'css:combine'
+  )
+);
+
+$.gulp.task('production',
+  $.gulp.series(
+    'sass',
+    'pug',
+    'js:foundation',
+    'js:lint',
+    'js:process',
+    'sprite:png',
+    'sprite:svg',
+    'copy:image',
+    'copy:fonts',
+    'css:foundation',
+    'css:mediagroup',    
+    'css:combine',
+    'clean:prod',
+    'minify:css',
+    'minify:js',
+    'copy:prod',
+    'copy:files'
+  )
+);
+/*
 $
-    .gulp
-    .task('default', $.gulp.series('clean', $.gulp.parallel('sass', 'pug', 'js:foundation', 'js:process', 'sprite:png', 'sprite:svg', 'copy:image', 'copy:fonts', 'css:foundation'), $.gulp.parallel('watch', 'serve')));
+.gulp
+.task('default', $.gulp.series('clean', $.gulp.parallel('sass', 'pug', 'js:foundation', 'js:process', 'sprite:png', 'sprite:svg', 'copy:image', 'copy:fonts', 'css:foundation'), $.gulp.parallel('watch', 'serve')));
+*/

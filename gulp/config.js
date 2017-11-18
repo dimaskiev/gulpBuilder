@@ -1,5 +1,4 @@
 module.exports = {
-  root: './build',
-
-  autoprefixerConfig: ['last 4 version', '> 1%', 'ie 8', 'ie 9', 'Opera 12.1']
+    root: './build',
+    autoprefixerConfig: ['last 8 version', '> 1%', 'ie 9', 'ie 10', 'ie 11', 'Opera 12.1']
 };
