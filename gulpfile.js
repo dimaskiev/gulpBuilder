@@ -44,8 +44,6 @@ $.gulp.task('default',
           'copy:image',
           'copy:fonts',
           'css:foundation',
-          
-          
         $.gulp.parallel(
           'watch',
           'serve')
@@ -64,8 +62,8 @@ $.gulp.task('build',
     'copy:image',
     'copy:fonts',
     'css:foundation',    
-    'css:mediagroup',
-    'css:combine'
+    'css:mediagroup'/*,
+   'css:combine'*/
   )
 );
 
@@ -82,7 +80,7 @@ $.gulp.task('production',
     'copy:fonts',
     'css:foundation',
     'css:mediagroup',    
-    'css:combine',
+    /*'css:combine',*/
     'clean:prod',
     'minify:css',
     'minify:js',
@@ -93,5 +91,13 @@ $.gulp.task('production',
 /*
 $
 .gulp
-.task('default', $.gulp.series('clean', $.gulp.parallel('sass', 'pug', 'js:foundation', 'js:process', 'sprite:png', 'sprite:svg', 'copy:image', 'copy:fonts', 'css:foundation'), $.gulp.parallel('watch', 'serve')));
-*/
+.task('default', $.gulp.series('clean', $.gulp.parallel(
+    'sass',
+    'pug',
+    'js:foundation',
+    'js:process',
+    'sprite:png',
+    'sprite:svg',
+    'copy:image',
+    'copy:fonts',
+    'css:foundation'), $.gulp.parallel('watch', 'serve')));*/

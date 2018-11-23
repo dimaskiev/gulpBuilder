@@ -23,8 +23,7 @@ module.exports = [
   './gulp/tasks/copy.production.js',
   './gulp/tasks/copy.files.js',  
   // build
-  './gulp/tasks/css.groupmedia.js',
-  './gulp/tasks/selectors.css.js'
+  './gulp/tasks/css.groupmedia.js'
 ]
 
 /*
